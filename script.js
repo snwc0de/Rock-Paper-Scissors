@@ -1,4 +1,6 @@
 console.log("Hello World!")
+
+// COMPUTER CHOICE
 function getComputerChoice(max){
     return Math.floor(Math.random() * max);
 }
@@ -10,16 +12,20 @@ if (getComputerChoice(3) === 0) {
     console.log ('Scissors');
 }
 
+// HUMAN CHOICE
 
-let human = getHumanChoice(3);
-function getHumanChoice(max) {
-  let human = prompt('Input Your Choice');
-  if (human === 'Rock') {
+function getHumanChoice() {
+  let userinput = prompt('Input Your Choice');
+  if (userinput === 'Rock') {
     console.log ('Rock');
-  } else if (human === 'Paper') {
+  } else if (userinput === 'Paper') {
     console.log ('Paper');
-  } else if (human === 'Scissors'){
+  } else if (userinput === 'Scissors'){
     console.log ('Scissors');
   }
 }
+getHumanChoice();
+
+let humanScore = 0;
+let computerScore = 0;
 
