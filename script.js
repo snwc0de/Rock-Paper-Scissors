@@ -11,9 +11,15 @@ if (getComputerChoice(3) === 0) {
 }
 
 
+let human = getHumanChoice(3);
+function getHumanChoice(max) {
+  let human = prompt('Input Your Choice');
+  if (human === 'Rock') {
+    console.log ('Rock');
+  } else if (human === 'Paper') {
+    console.log ('Paper');
+  } else if (human === 'Scissors'){
+    console.log ('Scissors');
+  }
+}
 
-// function getHumanChoice (one, two, three) {
-
-
-// }
-// getHumanChoice(Rock, Paper, Scissors);
