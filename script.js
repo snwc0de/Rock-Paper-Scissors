@@ -1,31 +1,40 @@
 console.log("Hello World!")
 
 // COMPUTER CHOICE
-function getComputerChoice(max){
-    return Math.floor(Math.random() * max);
+let computerinput = Math.floor(Math.random() * 3);
+let getComputerChoice = function() {
+    if (computerinput === 0) {
+        return 'Rock';
+    } else if (computerinput === 1) {
+        return 'Paper';
+    } else {
+        return 'Scissors';
+    }
 }
-if (getComputerChoice(3) === 0) {
-    console.log ('Rock');
-} else if (getComputerChoice(3) === 1) {
-    console.log ('Paper');
-} else {
-    console.log ('Scissors');
-}
+getComputerChoice();
+console.log(getComputerChoice());
+
+
+
 
 // HUMAN CHOICE
-
 function getHumanChoice() {
-  let userinput = prompt('Input Your Choice');
-  if (userinput === 'Rock') {
-    console.log ('Rock');
-  } else if (userinput === 'Paper') {
-    console.log ('Paper');
-  } else if (userinput === 'Scissors'){
-    console.log ('Scissors');
-  }
+    const humaninput = prompt('Input Your Choice');
+    if (humaninput === 'Rock') {
+        return 'Rock';
+    } else if (humaninput === 'Paper') {
+        return 'Paper';
+    } else if (humaninput === 'Scissors'){
+        return 'Scissors';
+    } else {
+        alert('Invalid');
+    }
 }
 getHumanChoice();
 
-let humanScore = 0;
-let computerScore = 0;
+
+
+if (getComputerChoice === getHumanChoice) {
+    console.log ('true');
+}
 
