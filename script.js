@@ -11,11 +11,7 @@ let getComputerChoice = function() {
         return 'Scissors';
     }
 }
-getComputerChoice();
 console.log(getComputerChoice());
-
-
-
 
 // HUMAN CHOICE
 function getHumanChoice() {
@@ -30,11 +26,42 @@ function getHumanChoice() {
         alert('Invalid');
     }
 }
-getHumanChoice();
+console.log(getHumanChoice())
 
+let humanScore = 0;
+let computerScore = 0
 
+function playRound(humanChoice, computerChoice) {
+    if (humanChoice === computerChoice) {
+        return 'RESULT: It\'s a tie, Go again.';
+    }
 
-if (getComputerChoice === getHumanChoice) {
-    console.log ('true');
+    if (humanChoice === 'Rock') {
+        if (computerChoice === 'Paper') {
+            return 'RESULT: You lose, Paper beats Rock.';
+        } else if (computerChoice === 'Scissors')
+            return 'RESULT: You win, Rock beats Scissors.';
+    }
+
+    if (humanChoice === 'Paper') {
+        if (computerChoice === 'Scissors') {
+            return 'RESULT: You lose, Scissors beats Paper.';
+        } else if (computerChoice === 'Rock')
+            return 'RESULT: You win, Paper beats Rock.';
+    }
+
+    if (humanChoice === 'Scissors') {
+        if (computerChoice === 'Paper') {
+            return 'RESULT: You win, Scissors beats Paper.';
+        } else if (computerChoice === 'Rock')
+            return 'RESULT: You lose, Rock beats Scissors.';
+    }
 }
+playRound (getHumanChoice(), getComputerChoice());
+console.log(playRound (getHumanChoice(), getComputerChoice()))
+
+
+// if (getComputerChoice() === getHumanChoice()) {
+//     console.log ('true');
+// }
 
