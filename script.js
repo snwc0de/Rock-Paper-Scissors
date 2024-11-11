@@ -14,7 +14,7 @@ let getComputerChoice = function() {
 
 // HUMAN CHOICE
 function getHumanChoice() {
-    let humanInput = prompt('Input Your Choice');
+    let humanInput = prompt('Choose between: \'Rock\', \'Paper\', or \'Scissors\'');
     let one = 'rock';
     let two = 'paper';
     let three = 'scissors';
@@ -25,7 +25,7 @@ function getHumanChoice() {
     } else if (humanInput.toLowerCase() === three.toLowerCase()){
         return 'Scissors';
     } else {
-        alert('Invalid');
+        alert('Enter a valid input');
     }
 
 }
@@ -85,9 +85,9 @@ console.log('UserScore = ' + humanScore);
 console.log('ComputerScore = ' + computerScore);
 
 if (humanScore > computerScore){
-    console.log('RESULT: THE USER WINS THE GAME');
+    console.log('FINAL RESULT: THE USER WINS THE GAME');
 } else if (humanScore < computerScore) {
-    console.log('RESULT: THE COMPUTER WINS THE GAME');
+    console.log('FINAL RESULT: THE COMPUTER WINS THE GAME');
 } else {
     console.log('FINAL RESULT: THE GAME ENDS IN A DRAW');
 }
