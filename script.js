@@ -29,131 +29,69 @@ function getHumanChoice() {
     }
 
 }
-getHumanChoice()
 
+//SCORE CONTAINER
 let humanScore = 0;
 let computerScore = 0
 
-
+//A ROUND
 function playRound(humanChoice, computerChoice) {
     if (humanChoice === computerChoice) {
-        return 'RESULT: It\'s a tie.';
+        return 'It\'s a tie.';
     }
     
     if (humanChoice === 'Rock') {
         if (computerChoice === 'Paper') {
             computerScore++;
-            return 'RESULT: You lose, Paper beats Rock.';
+            return 'You lose this round, Paper beats Rock.';
         } else if (computerChoice === 'Scissors'){
             humanScore++;
-            return 'RESULT: You win, Rock beats Scissors.';
+            return 'You win this round, Rock beats Scissors.';
         }
     };
 
     if (humanChoice === 'Paper') {
         if (computerChoice === 'Scissors') {
             computerScore++;
-            return 'RESULT: You lose, Scissors beats Paper.';
+            return 'You lose this round, Scissors beats Paper.';
         } else if (computerChoice === 'Rock'){
             humanScore++;
-            return 'RESULT: You win, Paper beats Rock.';
+            return 'You win this round, Paper beats Rock.';
         }
     };
 
     if (humanChoice === 'Scissors') {
         if (computerChoice === 'Paper') {
             humanScore++;
-            return 'RESULT: You win, Scissors beats Paper.';
+            return 'You win this round, Scissors beats Paper.';
         } else if (computerChoice === 'Rock') {
             computerScore++;
-            return 'RESULT: You lose, Rock beats Scissors.';
+            return 'You lose this round, Rock beats Scissors.';
         }        
     };
 }
 
-
+// FIVE ROUNDS
 function playGame() {
-    console.log(playRound(getHumanChoice(), getComputerChoice()));
-    console.log(playRound(getHumanChoice(), getComputerChoice()));
-    console.log(playRound(getHumanChoice(), getComputerChoice()));
-    console.log(playRound(getHumanChoice(), getComputerChoice()));
-    console.log(playRound(getHumanChoice(), getComputerChoice()));
+    console.log('ROUND 1: ' + playRound(getHumanChoice(), getComputerChoice()));
+    console.log('ROUND 2: ' + playRound(getHumanChoice(), getComputerChoice()));
+    console.log('ROUND 3: ' + playRound(getHumanChoice(), getComputerChoice()));
+    console.log('ROUND 4: ' + playRound(getHumanChoice(), getComputerChoice()));
+    console.log('ROUND 5: ' + playRound(getHumanChoice(), getComputerChoice()));
 }
 playGame();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// function gameScore() {
-//     if (getWinner === 'Human wins') {
-//         humanScore++;
-//     } else if (getWinner === 'Computer wins') {
-//         computerScore++;
-//     }
-// } 
-
 
 console.log('UserScore = ' + humanScore);
 console.log('ComputerScore = ' + computerScore);
 
-console.log(humanSelection);
-console.log(computerSelection);
+if (humanScore > computerScore){
+    console.log('RESULT: THE USER WINS THE GAME');
+} else if (humanScore < computerScore) {
+    console.log('RESULT: THE COMPUTER WINS THE GAME');
+} else {
+    console.log('FINAL RESULT: THE GAME ENDS IN A DRAW');
+}
+
+
 
 
