@@ -14,17 +14,22 @@ let getComputerChoice = function() {
 
 // HUMAN CHOICE
 function getHumanChoice() {
-    const humaninput = prompt('Input Your Choice');
-    if (humaninput === 'Rock') {
+    let humanInput = prompt('Input Your Choice');
+    let one = 'rock';
+    let two = 'paper';
+    let three = 'scissors';
+    if (humanInput.toLowerCase() === one.toLowerCase()) {
         return 'Rock';
-    } else if (humaninput === 'Paper') {
+    } else if (humanInput.toLowerCase() === two.toLowerCase()) {
         return 'Paper';
-    } else if (humaninput === 'Scissors'){
+    } else if (humanInput.toLowerCase() === three.toLowerCase()){
         return 'Scissors';
     } else {
         alert('Invalid');
     }
+
 }
+getHumanChoice()
 
 let humanScore = 0;
 let computerScore = 0
@@ -57,7 +62,7 @@ function playRound(humanChoice, computerChoice) {
 
     if (humanChoice === 'Scissors') {
         if (computerChoice === 'Paper') {
-            humanScor++;
+            humanScore++;
             return 'RESULT: You win, Scissors beats Paper.';
         } else if (computerChoice === 'Rock') {
             computerScore++;
@@ -74,7 +79,7 @@ function playGame() {
     console.log(playRound(getHumanChoice(), getComputerChoice()));
     console.log(playRound(getHumanChoice(), getComputerChoice()));
 }
-playGame()
+playGame();
 
 
 
